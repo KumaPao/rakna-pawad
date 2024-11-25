@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยินดีที่จบการศึกษา!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">
+            <h1 class="animated-title">ยินดีด้วยนะที่จบการศึกษา!</h1>
+            <p>คุณทำได้แล้ว! เราภูมิใจในตัวคุณมากๆ</p>
+        </div>
+
+        <div class="photo-frame">
+            <img id="profile-photo" src="https://via.placeholder.com/250" alt="Profile Picture">
+        </div>
+
+        <!-- ไอคอนแผ่นเสียงที่หมุน -->
+        <div id="musicPlayer" class="music-player">
+            <div id="musicIcon" class="music-icon" onclick="toggleMusic()">
+                <img src="https://img.icons8.com/ios-filled/100/ffffff/record.png" alt="Record Icon" />
+            </div>
+            <!-- Iframe ที่ซ่อนเสียงเพลงจาก YouTube -->
+            <iframe id="musicIframe" width="0" height="0" 
+                src="https://www.youtube.com/embed/jh2fgf2rNj8?autoplay=1&mute=1&loop=1&playlist=jh2fgf2rNj8" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <button id="confettiButton">คลิกเพื่อเปิดคอนเฟตติ</button>
+        <button id="openPopupButton">เพิ่มป๊อปอัพ</button>
+
+        <!-- ป๊อปอัพ -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopupButton" class="close">&times;</span>
+                <h2>ยินดีด้วยนะ!</h2>
+                <p>คุณทำได้เยี่ยมมากเลย!</p>
+                <img src="https://via.placeholder.com/150" alt="Congratulation" class="popup-image">
+            </div>
+        </div>
+
+        <div id="confetti"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
